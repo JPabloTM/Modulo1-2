@@ -1,0 +1,25 @@
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+<div id="app">
+    <p>{{ titulo }}</p>
+
+<!-- Com o [v-bind] o javascript atualiza o html com o dado da instancia e logo apos
+    o [v-on] pega o evento no html e atualiza os dados na instancia [linhas 11 e 12], 
+    porém isso pode ser feito de uma vez utilizando two-way-data-binding
+    que no caso seria o [v-model] utilizado na linha 14   -->
+    
+<!-- <input type="text" v-bind:value="titulo"
+    v-on:input="titulo = $event.target.value"> -->
+    
+    <input type="text" v-model="titulo">
+    
+</div>    
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            titulo: 'Usando VueJS'
+        }
+    })
+</script>
