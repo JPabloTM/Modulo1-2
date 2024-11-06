@@ -29,12 +29,13 @@
 <div id="app">
     <div class="caixas">
         <div class="demo" :style="{'background-color': cor}"></div>
-        <div class="demo" :style="meuEstilo"></div>
+        <div class="demo" :style="[meuEstilo, {height: altura}]"></div>
         <div class="demo"></div>
     </div>
     <hr>
     <input type="text" v-model="cor">
     <input type="text" v-model="largura">
+    <input type="text" v-model="altura">
 </div>
 
 <script>
@@ -42,7 +43,8 @@
         el: '#app',
         data: {
             cor: 'red',
-            largura: 100
+            largura: 100,
+            altura: 50
         },
         computed: {
             meuEstilo() {
