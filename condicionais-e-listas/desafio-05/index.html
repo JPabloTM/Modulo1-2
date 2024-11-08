@@ -18,7 +18,7 @@
     Imprima também o índice de cada elemento. -->
   <h2>#02</h2>
   <ul>
-    <li v-for="(nome, i) in nomes">{{ nome }} - {{ i }}</li>
+    <li v-for="(nome, i) in array">{{ nome }} - {{ i }}</li>
   </ul>
   
   <!-- 3) Imprimir todos os pares de valor-chave do objeto a seguir:
@@ -30,7 +30,8 @@
     Imprima também o índice de cada item. -->
   <h2>#03</h2>
   <ul>
-    <li></li>
+    <li v-for="(valor, chave, indice) in livro"> 
+      {{ chave }}: {{ valor }}  [{{ indice }}]</li>
   </ul>
   
   <!-- 4) Imprima o seguinte objeto (somente os valores) e
@@ -43,8 +44,16 @@
     (dica: use v-for e v-if na resolução) -->
   <h2>#04</h2>
   <ul>
-    <li>
-    
+    <li v-for="(valor) in aluno">
+      <template v-if="!Array.isArray(valor)">
+        {{ valor }}
+      </template>
+      <template v-else>
+        Notas:
+        <ul>
+          <li v-for="nota in valor">{{ nota }}</li>
+        </ul>
+      </template>
     </li>
   </ul>
 </div>
