@@ -1,4 +1,4 @@
-<script src="https://unpkg.com/vue"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
 
 
 <div id="desafio">
@@ -7,9 +7,9 @@
     para ver a diferença -->
   <h2>#01</h2>
   <div>
-    <button @click="expressao = !expresao">Alternar</button>
+    <button @click="expressao = !expressao">Alternar</button>
     <p v-if="expressao">Você quer me ver ...</p>
-    <p v-else="!expressao">...ou eu</p>
+    <p v-else>...ou eu</p>
     <p v-show="expressao">Você quer me ver ...</p>
     <p v-show="!expressao">...ou eu</p>
   </div>
