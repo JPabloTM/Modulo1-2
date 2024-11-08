@@ -18,7 +18,7 @@
     Imprima também o índice de cada elemento. -->
   <h2>#02</h2>
   <ul>
-    <li></li>
+    <li v-for="(nome, i) in nomes">{{ nome }} - {{ i }}</li>
   </ul>
   
   <!-- 3) Imprimir todos os pares de valor-chave do objeto a seguir:
